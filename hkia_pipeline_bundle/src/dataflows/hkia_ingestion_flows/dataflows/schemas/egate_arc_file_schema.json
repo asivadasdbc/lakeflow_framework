@@ -1,0 +1,731 @@
+{
+  "fields": [
+    {
+      "metadata": {},
+      "name": "resp",
+      "nullable": true,
+      "type": {
+        "fields": [
+          {
+            "metadata": {},
+            "name": "code",
+            "nullable": true,
+            "type": "long"
+          },
+          {
+            "metadata": {},
+            "name": "data",
+            "nullable": true,
+            "type": {
+              "containsNull": true,
+              "elementType": {
+                "fields": [
+                  {
+                    "metadata": {},
+                    "name": "accept_ir_desc",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "string",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "accept_ir_type_ids",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "long",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "age",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "airline_iata_code",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "another_token_iden_score",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "another_token_pax_id",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "bagtags",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "string",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "boarding_pass_try_count",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "boarding_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "bp_barcode_md5",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "bp_issuer",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "bp_pnr_uid",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "bp_scan_time_ms",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "case_id",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "checked_in_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "compartment_code",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_class",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_expiry_date",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {
+                      "hashColumn": true
+                    },
+                    "name": "doc_gender",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_is_chip_read",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_issuer",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_nationality",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_scan_time_ms",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_sys_dob",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_type",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "doc_uid",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "docid_hash",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "enrol_face",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "enrolled",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "entry_result",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "entry_result_is_overrided",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "eye_distance",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_pan",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_quality_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_roll",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_tilt",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_verify_result",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "face_verify_time_ms",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "facial_token",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fdp_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_active_status",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_best_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_cancel_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_is_cancelled",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_is_departed",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_is_pbs_source",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_last_update_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fl_sch_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "flight_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "flight_id_iata_pref",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fmp_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "frontal_face_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "fvp_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "hkgseg_num",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "hkid_hash",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "img_src_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "init_token",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_accept_and_follow",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_another_token_auto_overrided",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_bcbp_changed",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_face_identified",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_face_verified",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_multi_token",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_name_verified",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_privacy_opt_out",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_scan_newhrp_front",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_test_flight",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_token_bcbp_trigger",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_token_face_trigger",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_token_mrz_trigger",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "is_token_random_check",
+                    "nullable": true,
+                    "type": "boolean"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "last_tracking_data_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "left_eye_close_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "leg_num",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "loc_code",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "loc_type",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "login_user_name",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "mask_confidence",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "matching_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "matching_type",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "name_verify_result",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "no_of_bagtag",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "pax_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "pax_info_hash",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "pax_last_modify_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "pax_status",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "pnr_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "pnrcode_hash",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "port_of_origin",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "process_time_ms",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "rank1_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "reject_ir_desc",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "string",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "reject_ir_type_ids",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "long",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "retry_ir_desc",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "string",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "retry_ir_type_ids",
+                    "nullable": true,
+                    "type": {
+                      "containsNull": true,
+                      "elementType": "string",
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "metadata": {},
+                    "name": "right_eye_close_score",
+                    "nullable": true,
+                    "type": "double"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "security_check_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "special_cond",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "sys_action",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "sys_type",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "term_code",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "token_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "token_level",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "tracking_data_id",
+                    "nullable": true,
+                    "type": "long"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "trans_start_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "trans_time",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "vr_fail_id",
+                    "nullable": true,
+                    "type": "string"
+                  },
+                  {
+                    "metadata": {},
+                    "name": "vr_mode",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                ],
+                "type": "struct"
+              },
+              "type": "array"
+            }
+          },
+          {
+            "metadata": {},
+            "name": "remark",
+            "nullable": true,
+            "type": "string"
+          }
+        ],
+        "type": "struct"
+      }
+    }
+  ],
+  "type": "struct"
+}

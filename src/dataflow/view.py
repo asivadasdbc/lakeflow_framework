@@ -94,5 +94,17 @@ class View:
         return SourceFactory.create(self.sourceType, self.sourceDetails)
 
     def _get_df(self) -> DataFrame:
-        """Retrieve the DataFrame based on the configured source type."""
-        return self.get_source_details().read_source(self.read_config)
+        """Retrieve the DataFrame based on the configured source type.
+        Supports additional requirement to hash a column if flag hashColumn set to True in source schema"""
+        df = self.get_source_details().read_source(self.read_config)
+        mapping = []
+        for field in df.schema.fields:
+            if 'hashColumn' in field.metadata:
+                if field.metadata['hashColumn']:
+                    mapping.append(f"md5({field.name}) as {field.name}")
+                else:
+                    mapping.append(field.name)
+            else:
+                mapping.append(field.name)
+
+        return df.selectExpr(*mapping)

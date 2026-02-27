@@ -1,0 +1,55 @@
+{
+    "dataFlowId": "egate_arc_ingestion_flow_001",
+    "dataFlowGroup": "hkia_ingestion_flows",
+    "dataFlowType": "flow",
+    "targetFormat": "delta",
+    "targetDetails": {
+        "table": "egate_arc_landing",
+        "tableProperties": {
+            "delta.enableChangeDataFeed": "true"
+        },
+        "schemaPath": "egate_arc.json"
+    },
+    "flowGroups": [
+        {
+            "flowGroupId": "main",
+            "flows": {
+                "f_egate_arc_ingest": {
+                    "flowType": "append_view",
+                    "flowDetails": {
+                        "targetTable": "egate_arc_landing",
+                        "sourceView": "v_egate_arc_records"
+                    },
+                    "views": {
+                        "v_egate_arc": {
+                            "mode": "stream",
+                            "sourceType": "cloudFiles",
+                            "sourceDetails": {
+                                "path": "/Volumes/scbucksmdev/scb/hkia/frs-egate/arc/*.json",
+                                "schemaPath": "./egate_arc_file_schema.json",
+                                "readerOptions": {
+                                    "cloudFiles.format": "json",
+                                    "multiLine": true
+                                }
+                            }
+                        },
+                        "v_egate_arc_exploded": {
+                            "mode": "stream",
+                            "sourceType": "sql",
+                            "sourceDetails": {
+                                "sqlStatement": "Select explode(resp.data) as records from STREAM(live.v_egate_arc)"
+                            }
+                        },
+                        "v_egate_arc_records": {
+                            "mode": "stream",
+                            "sourceType": "sql",
+                            "sourceDetails": {
+                                "sqlStatement": "SELECT records.* FROM STREAM(live.v_egate_arc_exploded)"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
