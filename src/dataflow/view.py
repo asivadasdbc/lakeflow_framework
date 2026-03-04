@@ -93,6 +93,23 @@ class View:
         """Get the views source details based on source type."""
         return SourceFactory.create(self.sourceType, self.sourceDetails)
 
+    def _get_hashing(self, hashing, field_name):
+        if str(hashing).lower() == "md5":
+            return f"md5({field_name}) as {field_name}"
+        elif str(hashing).lower() == "sha1":
+            return f"sha1({field_name}) as {field_name}"
+        elif str(hashing).lower() == "sha2":
+            return f"sha2({field_name},256) as {field_name}"
+        elif str(hashing).lower() == "fom":
+            return f"make_date(year(date({field_name})),month(date({field_name})),'01') as {field_name}"
+        elif str(hashing).lower() == "empty":
+            return f"cast(NULL as string) as {field_name}"
+        else:
+            return field_name
+
+
+
+
     def _get_df(self) -> DataFrame:
         """Retrieve the DataFrame based on the configured source type.
         Supports additional requirement to hash a column if flag hashColumn set to True in source schema"""
@@ -100,10 +117,7 @@ class View:
         mapping = []
         for field in df.schema.fields:
             if 'hashColumn' in field.metadata:
-                if field.metadata['hashColumn']:
-                    mapping.append(f"md5({field.name}) as {field.name}")
-                else:
-                    mapping.append(field.name)
+                mapping.append(self._get_hashing(field.metadata["hashColumn"], field.name))
             else:
                 mapping.append(field.name)
 
